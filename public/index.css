@@ -1,0 +1,45 @@
+.con {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.reg-con,
+.log-con {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.log-con form,
+.reg-con form {
+    width: 50%;
+    text-align: center;
+}
+
+.reg-con input,
+.log-con input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.log-con form {}
+
+.reg-con {
+    border-left: solid 2px black;
+}
+
+body {
+    background-color: #8EE4AF;
+    color: #05386B;
+    text-align: center;
+}
+
+input {
+    background-color: #84beb381;
+    border: solid 1px black;
+}

@@ -12,23 +12,38 @@
 
 <body>
 
+    <h1 class="heading">The To Do App</h1>
+
     <div class="con">
         <div class="log-con">
 
             <h1>Login</h1>
-            <br><br>
 
-            <form action="login" method="post">
 
-                <input class="user-text" type="text" placeholder="Username">
-                <input class="pass-text" type="text" placeholder="Password">
+            <form action="login" method="POST">
+
+                <input class="user-text" name="user" type="text" placeholder="Username">
+                <input class="pass-text" type="text" name="pass" placeholder="Password">
                 <input type="submit" value="Login">
 
             </form>
 
 
         </div>
-        <div class="reg-con"></div>
+        <div class="reg-con">
+
+            <h1> Register</h1>
+
+            <form action="" method="post">
+
+                <input type="text" name="name" placeholder="Enter your name ">
+                <input type="text" name="email" placeholder="Enter your Email Id ">
+                <input type="text" name="pass" placeholder="Create Password ">
+
+                <input type="submit" value="Register">
+            </form>
+
+        </div>
     </div>
 
 </body>

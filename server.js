@@ -6,9 +6,11 @@ const app = exp()
 
 
 app.use(exp.static('public'))
+app.use(exp.urlencoded())
+app.use(exp.json())
 
 app.post('/login', (req, res) => {
-    console.log("login")
+    console.log(req.body)
     res.send("logind")
 }
 )
