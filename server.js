@@ -19,6 +19,7 @@ app.use('/', routes)
 // server starts only when the database is connected
 
 db.sync().then(() => {
+
     app.listen(5555, () => {
         console.log("server Started")
     })

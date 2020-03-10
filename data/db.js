@@ -41,6 +41,36 @@ const users = db.define('users', {
 
 );
 
+const tasks = db.define('tasks', {
+
+    task_id: {
+        type: seq.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+        allowNull: false,
+
+    },
 
 
-module.exports = { db, users }
+
+    text: {
+        type: seq.STRING(50),
+        allowNull: true,
+
+    },
+
+    checked: {
+        type: seq.BOOLEAN,
+        allowNull: false
+    }
+
+
+
+
+
+})
+
+tasks.belongsTo(users)
+
+
+module.exports = { db, users, tasks }
