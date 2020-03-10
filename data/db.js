@@ -1,7 +1,8 @@
 const seq = require('sequelize')
 
 const db = new seq({
-    dialect: 'mysql',
+    dialect: 'sqlite',
+    storage: __dirname + '/data.db'
     username: 'todouser',
     password: 'classmatetodo',
     database: 'todoapp'

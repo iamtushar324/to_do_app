@@ -10,12 +10,14 @@
 
 <body>
     <h1> List </h1>
-    <input type="text" id="input-text">
-    <button id="add-btn">Add</button>
-    <button id="clr-btn">Clear Checked</button>
-    <ul>
+    <form action="task/add" method="post">
+        <input type="checkbox" name="check" id="">
+        <input type="text" name="task" id="input-text">
+        <input type="submit" value="Add" id="add-btn">
+    </form>
+    <a id="clr-btn" href="/task/delete">Clear Checked</a>
+    <ul id="list">
 
-        <input class="checkbox" type="checkbox"><span>Hello</span>
     </ul>
 
 

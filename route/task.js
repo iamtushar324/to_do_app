@@ -17,14 +17,39 @@ route.get('/', (req, res) => {
 })
 
 
-route.get('/add', (req, res) => {
+route.post('/add', (req, res) => {
+
+    let ch;
+    if (req.body.check) {
+        ch = true
+    }
+    else {
+        ch = false
+    }
 
     tasks.create({
-        text: "sdfhsdfshdfhdsf sdfdsfsdfkldskjf d",
-        checked: true,
-        userId: 2
+        text: req.body.task,
+        checked: ch,
+        userId: 1
     })
-    res.redirect('/task')
+
+    res.redirect('/list.html')
+})
+
+route.get('/delete', (req, res) => {
+    tasks.destroy({
+        where: {
+            checked: true
+        }
+    }).then(() => {
+        console.log("checked rows deleted")
+
+    }).catch(() => {
+        console.error("checked rows not  deleted")
+    })
+
+    res.redirect('/list.html')
+
 })
 
 
