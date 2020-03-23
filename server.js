@@ -5,7 +5,7 @@ const { db, users } = require('./data/db')
 
 
 app.use(exp.static('public'))
-app.use(exp.urlencoded())
+// app.use(exp.urlencoded())
 app.use(exp.json())
 
 app.use('/', routes)

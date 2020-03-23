@@ -43,3 +43,25 @@ input {
     background-color: #84beb381;
     border: solid 1px black;
 }
+
+.msg {
+    border: solid 2px black;
+    padding: 10px 60px 10px 60px;
+    background-color: rgb(73,
+            194,
+            73);
+    color: black;
+    display: none;
+
+}
+
+.lmsg {
+    border: solid 2px black;
+    padding: 10px 60px 10px 60px;
+    background-color: rgb(73,
+            194,
+            73);
+    color: black;
+    display: none;
+
+}

@@ -9,13 +9,16 @@
 </head>
 
 <body>
-    <h1> List </h1>
-    <form action="task/add" method="post">
-        <input type="checkbox" name="check" id="">
-        <input type="text" name="task" id="input-text">
-        <input type="submit" value="Add" id="add-btn">
-    </form>
-    <a id="clr-btn" href="/task/delete">Clear Checked</a>
+
+    <div id="del">Deleted</div>
+    <h1 id="listname"> Your List </h1>
+
+
+    <input type="text" name="task" id="input-text">
+    <input type="submit" value="Add" id="add-btn">
+
+    <button id="clr-btn">Clear Checked</button>
+    <button id="out-btn">Logout</button>
     <ul id="list">
 
     </ul>

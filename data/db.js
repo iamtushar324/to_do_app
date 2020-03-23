@@ -1,8 +1,9 @@
 const seq = require('sequelize')
+const { random_gen } = require('../utils/token_gen')
 
 const db = new seq({
-    dialect: 'sqlite',
-    storage: __dirname + '/data.db',
+    dialect: 'mysql',
+
     username: 'todouser',
     password: 'classmatetodo',
     database: 'todoapp'
@@ -15,6 +16,12 @@ const users = db.define('users', {
         autoIncrement: true,
         allowNull: false,
 
+    },
+
+    token: {
+        type: seq.STRING(30),
+        allowNull: false,
+        unique: true,
     },
 
     name: {
@@ -37,6 +44,8 @@ const users = db.define('users', {
 
 
     }
+
+
 
 }
 

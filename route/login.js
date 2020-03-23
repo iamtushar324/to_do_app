@@ -2,7 +2,7 @@ const route = require('express').Router()
 const { users } = require('../data/db')
 
 route.post('/', (req, res) => {
-
+    console.log(req.body)
     users.findOne({
         where:
         {
@@ -11,18 +11,17 @@ route.post('/', (req, res) => {
     })
         .then((user) => {
             if (user.pass == req.body.pass) {
-                res.redirect('../list.html')
+                res.send({ token: user.token })
             }
             else {
-                console.error("wrong Password")
-                res.redirect('../')
+                res.send({ error: "incorrect username or password" })
             }
 
 
         })
         .catch(() => {
-            console.error("username not found ")
-            res.redirect('../')
+            res.send({ error: "incoarrect username or password" })
+
         })
 
 
