@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/iamtushar324/to_do_app#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.5",
     "sqlite3": "^4.1.1"
